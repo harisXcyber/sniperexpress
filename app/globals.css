@@ -1,39 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #0a0f1e;
-  --navy-mid: #0f172a;
-  --navy-light: #1e293b;
   --orange: #ea580c;
   --orange-light: #fb923c;
-  --orange-glow: rgba(234, 88, 12, 0.15);
+  --navy: #0a0f1e;
+  --bg: #ffffff;
+  --fg: #111827;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: var(--navy);
-  color: #f8fafc;
-  font-family: 'Inter', system-ui, sans-serif;
+  background: #ffffff;
+  color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-.glow-orange {
-  box-shadow: 0 0 40px rgba(234, 88, 12, 0.25);
+/* Crosshair grid background */
+.crosshair-bg {
+  background-image:
+    linear-gradient(rgba(234,88,12,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(234,88,12,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
+/* Orange text gradient */
 .text-gradient {
-  background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 50%, #fb923c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.crosshair-bg {
-  background-image:
-    linear-gradient(rgba(234,88,12,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(234,88,12,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+/* Glow effect */
+.glow-orange {
+  box-shadow: 0 0 40px rgba(234, 88, 12, 0.3);
+}
+
+/* Custom range slider */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ea580c;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(234,88,12,0.4);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ea580c;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(234,88,12,0.4);
 }
