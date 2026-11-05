@@ -88,9 +88,9 @@ export default function Hero() {
           style={{ willChange: "transform", transformStyle: "preserve-3d" }}
         >
           {/* Truck SVG illustration */}
-          <svg viewBox="0 0 700 220" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full drop-shadow-2xl">
+          <svg viewBox="0 0 700 240" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full drop-shadow-2xl">
             {/* Road/shadow */}
-            <ellipse cx="350" cy="210" rx="320" ry="12" fill="#f1f5f9"/>
+            <ellipse cx="350" cy="228" rx="320" ry="10" fill="#f1f5f9"/>
 
             {/* Truck body (cargo) */}
             <rect x="30" y="60" width="430" height="130" rx="8" fill="#0a0f1e"/>
